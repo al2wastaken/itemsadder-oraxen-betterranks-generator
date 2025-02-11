@@ -7,7 +7,7 @@ Made with Python and love by al2 ❤️
 - And if you host it as an API, a virtual machine. https://oyunlayici.com/ for Minecraft hosting and Websites.
 
 ### Modules
--For basic: PIL, Image, ImageDraw, colorsys and io.
+- For basic: PIL, Image, ImageDraw, colorsys and io.
 - For API: flask and the basic modules.
 <br>
 Simply use "pip install <module name>"
