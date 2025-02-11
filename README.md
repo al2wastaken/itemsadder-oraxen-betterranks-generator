@@ -10,7 +10,7 @@ Made with Python and love by al2 ❤️
 - For basic: PIL, Image, ImageDraw, colorsys and io.
 - For API: flask and the basic modules.
 <br>
-Simply use "pip install \<module name\>"
+Simply use "pip install [module name]"
 
 ## How To Use It?
 So, basicly install the modules and start the app.py you need and search up on your browser for "http://127.0.0.1:5000/generate-image?text=<your rank, ex: owner, admin, developer, vip>&color=%23<hex code with out hashtag, ex: ffaaff>&darker_color=%23<hex code with out hashtag, ex: ff55ff>" or just run basic.py and enter your things and start to create custom font tags!
