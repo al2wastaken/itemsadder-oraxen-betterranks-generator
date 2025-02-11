@@ -4,7 +4,7 @@ Made with Python and love by al2 ❤️
 
 ## Needs
 - python 3.x, anything works if it's LTS.
-- And if you host it as a API, a virtual machine. https://oyunlayici.com/ for Minecraft hosting and Websites.
+- And if you host it as an API, a virtual machine. https://oyunlayici.com/ for Minecraft hosting and Websites.
 
 ### Modules
 For basic: PIL, Image, ImageDraw, colorsys and io.
