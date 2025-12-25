@@ -1,0 +1,15 @@
+{
+  "name": "itemsadder-oraxen-betterranks-generator-js",
+  "version": "1.0.0",
+  "description": "Node.js port of itemsadder/oraxen better ranks generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "basic": "node basic.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jimp": "^0.22.10",
+    "color": "^4.2.3"
+  }
+}

@@ -1,24 +1,64 @@
-# ✨ ItemsAdder/Oraxen Custom Font Tag Generator / API
+# ItemsAdder / Oraxen Font Tag Generator 
 
-Made with Python and love by al2 ❤️
+A small tool that generates pixel-font tag images for ItemsAdder/Oraxen or any texture pack.
 
-## Needs
-- python 3.x, anything works.
-- And if you host it as an API, a virtual machine. https://oyunlayici.com/ for Minecraft hosting and Websites.
+## Features
+- Generate small pixel-font tag PNGs from input text.
+- API endpoint to generate images on-the-fly.
+- CLI to save images locally.
+- Supports automatic darker-shadow color calculation when `darker_color` is set to `0`.
 
-### Modules
-- For basic: PIL, Image, ImageDraw, colorsys and io.
-- For API: flask and the basic modules.
-<br>
-Simply use "pip install [module name]"
+## Contents
+- `src/imageMaker.js` — Node.js image generator using `jimp`
+- `index.js` — Node.js Express API server.
+- `basic.js` — Node.js CLI script.
+- `font/` — required font PNGs used to draw each character.
 
-## How To Use It?
-So, basicly install the modules and start the app.py you need and search up on your browser for "http://127.0.0.1:5000/generate-image?text=<your rank, ex: owner, admin, developer, vip>&color=%23<hex code with out hashtag, ex: ffaaff>&darker_color=%23<hex code with out hashtag, ex: ff55ff>" or just run basic.py and enter your things and start to create custom font tags!
+## Requirements
 
-### Notes before use it:
-- You can use " instead of plus sign to request it, normal plus sign can not work on API.
-- You can use 0 for darker color input for automaticly darken the color.
-- Use "%23" instead of "#" before hex code, it will be cause an error.
-- If you want to add extra png you can use [Aseprite](https://github.com/aseprite/aseprite) and don't forget to make blank on top, it's important.
-- Web API doesn't save anything you need to save as picture on your browser.
-- Enjoy using it :)
+Node.js version:
+- Node.js 14+ (recommended)
+- npm
+- Dependencies (installed with `npm install`): `express`, `jimp`, `color`
+
+## Running the Node.js API
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the API server:
+
+```bash
+npm start
+```
+
+Example request:
+
+```
+http://localhost:5000/generate-image?text=owner&color=%23ffaaff&darker_color=%23000000
+```
+
+Notes:
+- URL-encode the `#` sign as `%23` in query parameters.
+- Set `darker_color=0` to use automatic darkening of the main color.
+
+## Using the Node.js CLI
+
+Run the interactive CLI:
+
+```bash
+npm run basic
+```
+
+Follow the prompts to enter the text and colors. The image will be saved to the `output/` folder.
+
+## Adding or modifying font characters
+
+Add or replace PNGs in the `font/` directory. Each character image must be a small RGBA PNG where non-transparent pixels form the glyph. Keep a blank row on top of each glyph image (as the generator expects small 9px-high images).
+
+## License & Credits
+
+Original Python project by al2wastaken. Keep the original LICENSE file for license details.
